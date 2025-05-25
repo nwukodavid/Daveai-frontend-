@@ -9,7 +9,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://daveai-backend.onrender.com/api/login', {
+      const res = await axios.post('https://nd.onrender.com/api/login', {
         phone,
         password,
       });
