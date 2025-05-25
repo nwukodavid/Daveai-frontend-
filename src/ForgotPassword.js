@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ForgotPassword() {
-  const [email, setEmail] = useState('');
-
-  const handleReset = (e) => {
-    e.preventDefault();
-    // Handle password reset logic
-    console.log('Reset link sent to:', email);
-  };
-
   return (
     <div>
-      <h2>Forgot Password</h2>
-      <form onSubmit={handleReset}>
-        <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-        <button type="submit">Send Reset Link</button>
-      </form>
+      <h1>Forgot Password</h1>
+      <input type="text" placeholder="Phone or Email" /><br />
+      <button>Reset Password</button><br /><br />
+      <Link to="/">Login</Link>
     </div>
   );
 }
+
 export default ForgotPassword;
